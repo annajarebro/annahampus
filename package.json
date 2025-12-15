@@ -1,0 +1,12 @@
+{
+  "name": "annahampus",
+  "version": "1.0.0",
+  "description": "Anna and Hampus website",
+  "scripts": {
+    "dev": "live-server --port=8000 --open=/index.html"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
+
