@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anna and Hampus</title>
+    <title>Anna och Hampus - Bröllop 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @font-face {
@@ -31,71 +31,136 @@
             font-family: 'PP Neue Montreal', sans-serif;
         }
         
-        .background-video {
+        .parallax-shape {
+            will-change: transform;
+        }
+        
+        body {
+            background-color: #152640;
+            position: relative;
+        }
+        
+        body::after {
+            content: "";
+            animation: grain 8s steps(10) infinite;
+            background-image: url('img/paper_1.png');
+            height: 300%;
+            width: 300%;
+            left: -50%;
+            top: -100%;
+            opacity: 0.3;
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: left bottom;
-            z-index: -1;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        @keyframes grain {
+            0%, 100% { transform: translate(0, 0); }
+            10% { transform: translate(-5%, -10%); }
+            20% { transform: translate(-15%, 5%); }
+            30% { transform: translate(7%, -25%); }
+            40% { transform: translate(-5%, 25%); }
+            50% { transform: translate(-15%, 10%); }
+            60% { transform: translate(15%, 0%); }
+            70% { transform: translate(0%, 15%); }
+            80% { transform: translate(3%, 25%); }
+            90% { transform: translate(-10%, 10%); }
         }
     </style>
 </head>
 <body>
-    <!-- autoplay temporarily disabled for development - will be re-enabled later -->
-    <video class="background-video" loop muted playsinline>
-        <source src="img/waves.mp4" type="video/mp4">
-    </video>
-    <section class="min-h-screen flex flex-col items-center justify-center relative">
-        <div class="text-center px-4 relative">
-            <img src="img/logo.png" alt="Logo" class="w-[280px] mx-auto mb-32">
-            <div class="text-white mb-16">
-                <div class="text-lg md:text-xl lg:text-2xl font-normal mb-1" style="font-family: 'PP Neue Montreal', sans-serif;">Välkommen till vårt bröllop den</div>
-                <div class="text-lg md:text-xl lg:text-2xl font-normal" style="font-family: 'PP Neue Montreal', sans-serif;">22 Augusti 2026.</div>
+    <!-- Section 1: Vigsel -->
+    <section class="min-h-screen border-b border-gray-300 flex items-center justify-center px-4 md:px-8">
+        <div class="w-full max-w-7xl flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20 relative z-10">
+            <!-- Text content -->
+            <div class="text-white text-left w-full md:max-w-[500px] p-6 md:p-0">
+                <h2 class="text-[20px] font-medium mb-4">17.00 Vigsel, St. Birgittas kapell</h2>
+                <p class="text-[16px] font-normal mb-2">Klippan 2, 414 51 Göteborg</p>
+                <p class="text-[16px] font-normal mb-1">Närmsta hållplats:</p>
+                <p class="text-[16px] font-normal">Vagnhallen Majorna (spårvagn), Klippan</p>
+                <p class="text-[16px] font-normal">(buss)</p>
             </div>
             
-            <button class="w-[240px] bg-white/80 text-[#133568] px-8 md:px-12 py-3 md:py-4 rounded-[12px] text-lg md:text-xl font-medium hover:bg-opacity-90 transition-all shadow-sm border-2 border-white" style="font-family: 'PP Neue Montreal', sans-serif;">
-                OSA
-            </button>
-            <div class="text-white text-sm mt-4" style="font-family: 'PP Neue Montreal', sans-serif;">
-                OSA senast 1 april
-            </div>
+            <!-- Circle shape -->
+            <div class="parallax-shape w-64 h-64 md:w-80 md:h-80 rounded-full bg-gray-300 flex-shrink-0 mt-6 relative z-10"></div>
         </div>
     </section>
-    
-    <section class="py-12 px-4">
-        <div class="max-w-2xl mx-auto space-y-6">
-            <div class="bg-white rounded-[12px] p-6 md:p-8 border-2 border-white">
-                <h2 class="text-xl md:text-2xl font-medium text-[#133568] mb-4">Ett kort</h2>
-                <p class="text-[#133568] leading-relaxed">
-                    "Lorem ipsum" är en utfyllnadstext som används inom grafisk design och publicering för att fylla utrymmen i layouter. Texten har sitt ursprung i Ciceros verk, men har blandats ihop och används för att visa hur en design kommer att se ut u
+
+    <!-- Section 2: Brudskål & Båttransport -->
+    <section class="min-h-screen border-b border-gray-300 flex items-center justify-center px-4 md:px-8">
+        <div class="w-full max-w-7xl flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20 relative z-10">
+            <!-- Text content -->
+            <div class="text-white text-left w-full md:max-w-[500px] p-6 md:p-0">
+                <h2 class="text-[20px] font-medium mb-4">18.00 Brudskål & Båttransport</h2>
+                <p class="text-[16px] font-normal leading-relaxed">
+                    En transportbåt tar oss från vigseln till festlokalen. Båtturen tar ca 1.5h. Under färden sker brudskål och mingel. Det finns begränsat med sittplatser, men gott om förfriskningsmöjligheter.
                 </p>
             </div>
             
-            <div class="bg-white rounded-[12px] p-6 md:p-8 border-2 border-white">
-                <h2 class="text-xl md:text-2xl font-medium text-[#133568] mb-4">Ett kort</h2>
-                <p class="text-[#133568] leading-relaxed">
-                    "Lorem ipsum" är en utfyllnadstext som används inom grafisk design och publicering för att fylla utrymmen i layouter. Texten har sitt ursprung i Ciceros verk, men har blandats ihop och används för att visa hur en design kommer att se ut u
-                </p>
-            </div>
-            
-            <div class="bg-white rounded-[12px] p-6 md:p-8 border-2 border-white">
-                <h2 class="text-xl md:text-2xl font-medium text-[#133568] mb-4">Ett kort</h2>
-                <p class="text-[#133568] leading-relaxed">
-                    "Lorem ipsum" är en utfyllnadstext som används inom grafisk design och publicering för att fylla utrymmen i layouter. Texten har sitt ursprung i Ciceros verk, men har blandats ihop och används för att visa hur en design kommer att se ut u
-                </p>
-            </div>
-            
-            <div class="bg-white rounded-[12px] p-6 md:p-8 border-2 border-white">
-                <h2 class="text-xl md:text-2xl font-medium text-[#133568] mb-4">Ett kort</h2>
-                <p class="text-[#133568] leading-relaxed">
-                    "Lorem ipsum" är en utfyllnadstext som används inom grafisk design och publicering för att fylla utrymmen i layouter. Texten har sitt ursprung i Ciceros verk, men har blandats ihop och används för att visa hur en design kommer att se ut u
-                </p>
-            </div>
+            <!-- Rectangle shape -->
+            <div class="parallax-shape w-64 h-48 md:w-80 md:h-60 bg-gray-300 flex-shrink-0 mt-6 relative z-10"></div>
         </div>
     </section>
+
+    <!-- Section 3: Middag & fest -->
+    <section class="min-h-screen border-b border-gray-300 flex items-center justify-center px-4 md:px-8">
+        <div class="w-full max-w-7xl flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20 relative z-10">
+            <!-- Text content -->
+            <div class="text-white text-left w-full md:max-w-[500px] p-6 md:p-0">
+                <h2 class="text-[20px] font-medium mb-4">19.30 Middag & fest på Rotundan</h2>
+                <p class="text-[16px] font-normal mb-2">Framnäs 1, 475 37 Bohus-björkö</p>
+                <p class="text-[16px] font-normal leading-relaxed">
+                    Tar man sig hit på egen hand så går det regelbundna färjor från Lilla Varholmens färjeterminal, Torslanda
+                </p>
+            </div>
+            
+            <!-- Circle shape -->
+            <div class="parallax-shape w-64 h-64 md:w-80 md:h-80 rounded-full bg-gray-300 flex-shrink-0 mt-6 relative z-10"></div>
+        </div>
+    </section>
+
+    <script>
+        // Parallax scrolling effect
+        function initParallax() {
+            const shapes = document.querySelectorAll('.parallax-shape');
+            
+            function updateParallax() {
+                const scrollY = window.scrollY;
+                
+                shapes.forEach((shape) => {
+                    const rect = shape.getBoundingClientRect();
+                    const sectionTop = rect.top + scrollY;
+                    const sectionHeight = shape.closest('section').offsetHeight;
+                    const scrollProgress = (scrollY - sectionTop + window.innerHeight) / (sectionHeight + window.innerHeight);
+                    
+                    // Parallax effect: shapes move at 0.4x speed (slower for more noticeable effect)
+                    const parallaxOffset = scrollProgress * 100 * 0.4;
+                    shape.style.transform = `translateY(${parallaxOffset}px)`;
+                });
+            }
+            
+            // Use requestAnimationFrame for smooth performance
+            let ticking = false;
+            function onScroll() {
+                if (!ticking) {
+                    window.requestAnimationFrame(() => {
+                        updateParallax();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            }
+            
+            window.addEventListener('scroll', onScroll, { passive: true });
+            updateParallax(); // Initial call
+        }
+        
+        // Initialize parallax when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initParallax);
+        } else {
+            initParallax();
+        }
+    </script>
 </body>
 </html>
-
