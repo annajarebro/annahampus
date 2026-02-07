@@ -8,114 +8,181 @@
     <style>
         @font-face {
             font-family: 'PP Neue Montreal';
-            src: url('PP Neue Montreal - Free for Personal Use v2.6 2/OTF/PPNeueMontreal-Book.otf') format('opentype');
+            src: url('PP Neue Montreal/OTF/PPNeueMontreal-Book.otf') format('opentype');
             font-weight: 400;
             font-style: normal;
         }
-        
+
         @font-face {
             font-family: 'PP Neue Montreal';
-            src: url('PP Neue Montreal - Free for Personal Use v2.6 2/OTF/PPNeueMontreal-Medium.otf') format('opentype');
+            src: url('PP Neue Montreal/OTF/PPNeueMontreal-Medium.otf') format('opentype');
             font-weight: 500;
             font-style: normal;
         }
-        
+
         @font-face {
             font-family: 'PP Neue Montreal';
-            src: url('PP Neue Montreal - Free for Personal Use v2.6 2/OTF/PPNeueMontreal-Bold.otf') format('opentype');
+            src: url('PP Neue Montreal/OTF/PPNeueMontreal-Bold.otf') format('opentype');
             font-weight: 700;
             font-style: normal;
         }
-        
+
         * {
             font-family: 'PP Neue Montreal', sans-serif;
         }
-        
+
+        html, body {
+            overflow-x: hidden;
+        }
+
         .parallax-shape {
             will-change: transform;
         }
-        
+
         body {
-            background-color: #152640;
+            background-color: #162946;
             position: relative;
+            overflow-wrap: break-word;
         }
-        
-        body::after {
-            content: "";
-            animation: grain 8s steps(10) infinite;
-            background-image: url('img/paper_1.png');
-            height: 300%;
-            width: 300%;
-            left: -50%;
-            top: -100%;
-            opacity: 0.3;
-            position: fixed;
-            pointer-events: none;
-            z-index: 1;
+
+        h1, h2, h3, h4, h5, h6 {
+            text-transform: uppercase;
+            font-weight: 400;
         }
-        
-        @keyframes grain {
-            0%, 100% { transform: translate(0, 0); }
-            10% { transform: translate(-5%, -10%); }
-            20% { transform: translate(-15%, 5%); }
-            30% { transform: translate(7%, -25%); }
-            40% { transform: translate(-5%, 25%); }
-            50% { transform: translate(-15%, 10%); }
-            60% { transform: translate(15%, 0%); }
-            70% { transform: translate(0%, 15%); }
-            80% { transform: translate(3%, 25%); }
-            90% { transform: translate(-10%, 10%); }
+
+        p {
+            color: #E5EAF2;
         }
     </style>
 </head>
 <body>
     <!-- Section 1: Vigsel -->
-    <section class="min-h-screen border-b border-gray-300 flex items-center justify-center px-4 md:px-8">
-        <div class="w-full max-w-7xl flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20 relative z-10">
-            <!-- Text content -->
-            <div class="text-white text-left w-full md:max-w-[500px] p-6 md:p-0">
-                <h2 class="text-[20px] font-medium mb-4">17.00 Vigsel, St. Birgittas kapell</h2>
+    <section class="min-h-screen flex items-center justify-center px-4 md:px-8">
+        <div class="w-full max-w-7xl min-w-0 min-h-screen md:min-h-0 flex flex-col md:flex-row items-center justify-between md:justify-center gap-0 md:gap-20 relative z-10 pt-14 pb-16 md:pt-0 md:pb-0">
+            <div class="text-white text-left w-full min-w-0 md:max-w-[500px] p-6 md:p-0 md:order-2">
+                <h2 class="text-[20px] mb-4">17.00 Vigsel St. Birgittas kapell</h2>
                 <p class="text-[16px] font-normal mb-2">Klippan 2, 414 51 Göteborg</p>
-                <p class="text-[16px] font-normal mb-1">Närmsta hållplats:</p>
-                <p class="text-[16px] font-normal">Vagnhallen Majorna (spårvagn), Klippan</p>
-                <p class="text-[16px] font-normal">(buss)</p>
+                <p class="text-[16px] font-normal">Närmsta hållplats: Vagnhallen Majorna (spårvagn), Klippan (buss)</p>
             </div>
-            
-            <!-- Circle shape -->
-            <div class="parallax-shape w-64 h-64 md:w-80 md:h-80 rounded-full bg-gray-300 flex-shrink-0 mt-6 relative z-10"></div>
+            <div class="parallax-shape -mx-4 w-[calc(100%+2rem)] md:mx-0 md:w-80 h-auto flex-1 min-h-0 md:flex-initial flex items-center justify-center mt-0 relative z-10 md:order-1 overflow-hidden">
+                <img id="frame-seq-vigsel" src="img/01/shell1.png" alt="Illustration vigsel" class="w-full h-auto block object-contain object-center pl-9 pr-9">
+            </div>
         </div>
     </section>
 
     <!-- Section 2: Brudskål & Båttransport -->
-    <section class="min-h-screen border-b border-gray-300 flex items-center justify-center px-4 md:px-8">
-        <div class="w-full max-w-7xl flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20 relative z-10">
-            <!-- Text content -->
-            <div class="text-white text-left w-full md:max-w-[500px] p-6 md:p-0">
-                <h2 class="text-[20px] font-medium mb-4">18.00 Brudskål & Båttransport</h2>
+    <section class="min-h-screen flex items-center justify-center px-4 md:px-8">
+        <div class="w-full max-w-7xl min-w-0 min-h-screen md:min-h-0 flex flex-col md:flex-row items-center justify-between md:justify-center gap-0 md:gap-20 relative z-10 pt-14 pb-16 md:pt-0 md:pb-0">
+            <div class="text-white text-left w-full min-w-0 md:max-w-[500px] p-6 md:p-0 md:order-2">
+                <h2 class="text-[20px] mb-4">18.00 Brudskål & Båttransport</h2>
                 <p class="text-[16px] font-normal leading-relaxed">
-                    En transportbåt tar oss från vigseln till festlokalen. Båtturen tar ca 1.5h. Under färden sker brudskål och mingel. Det finns begränsat med sittplatser, men gott om förfriskningsmöjligheter.
+                    En transportbåt tar oss från vigseln till festlokalen. Under färden sker brudskål och mingel. Båtturen tar ca 1.5h. Det finns begränsat med sittplatser, men gott om förfriskningsmöjligheter.
                 </p>
             </div>
-            
-            <!-- Rectangle shape -->
-            <div class="parallax-shape w-64 h-48 md:w-80 md:h-60 bg-gray-300 flex-shrink-0 mt-6 relative z-10"></div>
+            <div class="parallax-shape -mx-4 w-[calc(100%+2rem)] md:mx-0 md:w-96 h-auto flex-1 min-h-0 md:flex-initial flex items-center justify-center mt-0 relative z-10 md:order-1 overflow-hidden">
+                <img id="frame-seq-toast" src="img/02/toast1.png" alt="Illustration brudskål" class="w-full h-auto block object-contain object-center">
+            </div>
         </div>
     </section>
 
     <!-- Section 3: Middag & fest -->
-    <section class="min-h-screen border-b border-gray-300 flex items-center justify-center px-4 md:px-8">
-        <div class="w-full max-w-7xl flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20 relative z-10">
-            <!-- Text content -->
-            <div class="text-white text-left w-full md:max-w-[500px] p-6 md:p-0">
-                <h2 class="text-[20px] font-medium mb-4">19.30 Middag & fest på Rotundan</h2>
+    <section class="min-h-screen flex items-center justify-center px-4 md:px-8">
+        <div class="w-full max-w-7xl min-w-0 min-h-screen md:min-h-0 flex flex-col md:flex-row items-center justify-between md:justify-center gap-0 md:gap-20 relative z-10 pt-14 pb-16 md:pt-0 md:pb-0">
+            <div class="text-white text-left w-full min-w-0 md:max-w-[500px] p-6 md:p-0 md:order-2">
+                <h2 class="text-[20px] mb-4">19.30 Middag & fest på Rotundan, Björkö</h2>
                 <p class="text-[16px] font-normal mb-2">Framnäs 1, 475 37 Bohus-björkö</p>
                 <p class="text-[16px] font-normal leading-relaxed">
-                    Tar man sig hit på egen hand så går det regelbundna färjor från Lilla Varholmens färjeterminal, Torslanda
+                    Tar man sig hit på egen hand så går det regelbundna färjor från Lilla Varholmens färjeterminal, Torslanda.
                 </p>
             </div>
-            
-            <!-- Circle shape -->
-            <div class="parallax-shape w-64 h-64 md:w-80 md:h-80 rounded-full bg-gray-300 flex-shrink-0 mt-6 relative z-10"></div>
+            <div class="parallax-shape -mx-4 w-[calc(100%+2rem)] md:mx-0 md:w-64 h-auto flex-1 min-h-0 md:flex-initial flex items-center justify-center mt-0 relative z-10 md:order-1 overflow-hidden">
+                <img id="frame-seq-disco" src="img/03/disco2.png" alt="Illustration middag och fest" class="w-full h-auto block object-contain object-center">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Vickning & hemfärd -->
+    <section class="min-h-screen flex items-center justify-center px-4 md:px-8">
+        <div class="w-full max-w-7xl min-w-0 min-h-screen md:min-h-0 flex flex-col md:flex-row items-center justify-between md:justify-center gap-0 md:gap-20 relative z-10 pt-14 pb-16 md:pt-0 md:pb-0">
+            <div class="text-white text-left w-full min-w-0 md:max-w-[500px] p-6 md:p-0 md:order-2">
+                <h2 class="text-[20px] mb-4">02.30 Vickning & hemfärd</h2>
+                <p class="text-[16px] font-normal leading-relaxed mb-4">
+                    Färja avgår kl 03.00 från Björkö och en abonnerad buss tar oss sedan från färjeläget i Lilla Varholmen till Hotell Draken (Järntorget).
+                </p>
+                <p class="text-[16px] font-normal leading-relaxed">
+                    Vill man åka hem vid en annan tid går färjan ca en gång i timmen och det finns även anslutande kollektivtrafik vid färjelägret.
+                </p>
+            </div>
+            <div class="parallax-shape -mx-4 w-[calc(100%+2rem)] md:mx-0 md:w-[22rem] h-auto flex-1 min-h-0 md:flex-initial flex items-center justify-center mt-0 relative z-10 md:order-1 overflow-hidden">
+                <img id="frame-seq-fish" src="img/04/fish1.png" alt="Illustration vickning och hemfärd" class="w-full h-auto block object-contain object-center">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Klädkod -->
+    <section class="min-h-screen flex items-center justify-center px-4 md:px-8">
+        <div class="w-full max-w-7xl min-w-0 min-h-screen md:min-h-0 flex flex-col md:flex-row items-center justify-between md:justify-center gap-0 md:gap-20 relative z-10 pt-14 pb-16 md:pt-0 md:pb-0">
+            <div class="text-white text-left w-full min-w-0 md:max-w-[500px] p-6 md:p-0 md:order-1">
+                <h2 class="text-[20px] mb-4">Klädkod</h2>
+                <p class="text-[16px] font-normal">Kavaj</p>
+            </div>
+            <div class="parallax-shape -mx-4 w-[calc(100%+2rem)] md:mx-0 md:w-64 h-auto flex-1 min-h-0 md:flex-initial flex items-center justify-center mt-0 relative z-10 md:order-2 overflow-hidden">
+                <img id="frame-seq-seahorse" src="img/05/seahorse1.png" alt="Illustration klädkod" class="w-full h-auto block object-contain object-center">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Gåvor -->
+    <section class="min-h-screen flex items-center justify-center px-4 md:px-8">
+        <div class="w-full max-w-7xl min-w-0 min-h-screen md:min-h-0 flex flex-col md:flex-row items-center justify-between md:justify-center gap-0 md:gap-20 relative z-10 pt-14 pb-16 md:pt-0 md:pb-0">
+            <div class="text-white text-left w-full min-w-0 md:max-w-[500px] p-6 md:p-0 md:order-1">
+                <h2 class="text-[20px] mb-4">Gåvor</h2>
+                <p class="text-[16px] font-normal leading-relaxed">
+                    Er närvaro är den finaste gåvan. Om ni ändå vill uppvakta oss uppskattar vi ett litet bidrag till vår bröllopsresa.
+                </p>
+            </div>
+            <div class="parallax-shape -mx-4 w-[calc(100%+2rem)] md:mx-0 md:w-64 h-auto flex-1 min-h-0 md:flex-initial flex items-center justify-center mt-0 relative z-10 md:order-2 overflow-hidden">
+                <img id="frame-seq-crab" src="img/06/crab1.png" alt="Illustration gåvor" class="w-full h-auto block object-contain object-center">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Boende -->
+    <section class="min-h-screen flex items-center justify-center px-4 md:px-8">
+        <div class="w-full max-w-7xl min-w-0 min-h-screen md:min-h-0 flex flex-col md:flex-row items-center justify-between md:justify-center gap-0 md:gap-20 relative z-10 pt-14 pb-16 md:pt-0 md:pb-0">
+            <div class="text-white text-left w-full min-w-0 md:max-w-[500px] p-6 md:p-0 md:order-1">
+                <h2 class="text-[20px] mb-4">Boende</h2>
+                <p class="text-[16px] font-normal leading-relaxed">
+                    För inresande gäster rekommenderar vi att bo på Hotell Draken eller närliggande hotell kring Göteborg Centrum.
+                </p>
+            </div>
+            <div class="parallax-shape -mx-4 w-[calc(100%+2rem)] md:mx-0 md:w-80 h-auto flex-1 min-h-0 md:flex-initial flex items-center justify-center mt-0 relative z-10 md:order-2 overflow-hidden">
+                <img id="frame-seq-reef" src="img/07/reef1.png" alt="Illustration boende" class="w-full h-auto block object-contain object-center">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Tal & Spex -->
+    <section class="min-h-screen flex items-center justify-center px-4 md:px-8">
+        <div class="w-full max-w-7xl min-w-0 min-h-screen md:min-h-0 flex flex-col md:flex-row items-center justify-between md:justify-center gap-0 md:gap-20 relative z-10 pt-14 pb-16 md:pt-0 md:pb-0">
+            <div class="text-white text-left w-full min-w-0 md:max-w-[500px] p-6 md:p-0 md:order-1">
+                <h2 class="text-[20px] mb-4">Tal & Spex</h2>
+                <p class="text-[16px] font-normal leading-relaxed mb-4">
+                    Vill du hålla ett tal eller spex kontakta våra toastmasters
+                </p>
+                <p class="text-[16px] font-normal mb-1">Sanna Nalin 07X-XXX-XX-XX</p>
+                <p class="text-[16px] font-normal mb-1"><a href="mailto:annahampus2026@gmail.com" class="underline hover:opacity-80">annahampus2026@gmail.com</a></p>
+                <p class="text-[16px] font-normal mb-1">Person nr 2 07X-XXX-XX-XX</p>
+                <p class="text-[16px] font-normal mb-6"><a href="mailto:annahampus2026@gmail.com" class="underline hover:opacity-80">annahampus2026@gmail.com</a></p>
+                <p class="text-[16px] font-normal leading-relaxed">
+                    Har ni övriga frågor är ni varmt välkomna att kontakta brudparet:
+                </p>
+                <p class="text-[16px] font-normal mt-2">Anna: 070-286 63 33</p>
+                <p class="text-[16px] font-normal">Hampus: 07X-XXX-XX-XX</p>
+            </div>
+            <div class="parallax-shape -mx-4 w-[calc(100%+2rem)] md:mx-0 md:w-80 h-auto flex-1 min-h-0 md:flex-initial flex items-center justify-center mt-0 relative z-10 md:order-2 overflow-hidden">
+                <img id="frame-seq-song" src="img/08/song1.png" alt="Illustration tal och spex" class="w-full h-auto block object-contain object-center">
+            </div>
         </div>
     </section>
 
@@ -123,23 +190,23 @@
         // Parallax scrolling effect
         function initParallax() {
             const shapes = document.querySelectorAll('.parallax-shape');
-            
+
             function updateParallax() {
                 const scrollY = window.scrollY;
-                
-                shapes.forEach((shape) => {
+
+                shapes.forEach((shape, i) => {
                     const rect = shape.getBoundingClientRect();
                     const sectionTop = rect.top + scrollY;
-                    const sectionHeight = shape.closest('section').offsetHeight;
+                    const section = shape.closest('section');
+                    const sectionHeight = section ? section.offsetHeight : 0;
                     const scrollProgress = (scrollY - sectionTop + window.innerHeight) / (sectionHeight + window.innerHeight);
-                    
-                    // Parallax effect: shapes move at 0.4x speed (slower for more noticeable effect)
-                    const parallaxOffset = scrollProgress * 100 * 0.4;
+
+                    // Parallax effect: shapes move at 1x speed for a more noticeable effect
+                    const parallaxOffset = scrollProgress * 100 * 1;
                     shape.style.transform = `translateY(${parallaxOffset}px)`;
                 });
             }
-            
-            // Use requestAnimationFrame for smooth performance
+
             let ticking = false;
             function onScroll() {
                 if (!ticking) {
@@ -150,17 +217,43 @@
                     ticking = true;
                 }
             }
-            
+
             window.addEventListener('scroll', onScroll, { passive: true });
             updateParallax(); // Initial call
         }
-        
-        // Initialize parallax when DOM is ready
+
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', initParallax);
         } else {
             initParallax();
         }
+
+        // Frame sequences for sections 1–8
+        (function initFrameSequences() {
+            const configs = [
+                { id: 'frame-seq-vigsel', frames: ['img/01/shell1.png', 'img/01/shell2.png', 'img/01/shell3.png'] },
+                { id: 'frame-seq-toast', frames: ['img/02/toast1.png', 'img/02/toast2.png'] },
+                { id: 'frame-seq-disco', frames: ['img/03/disco2.png', 'img/03/Untitled_Artwork 30.png'] },
+                { id: 'frame-seq-fish', frames: ['img/04/fish1.png', 'img/04/fish2.png'] },
+                { id: 'frame-seq-seahorse', frames: ['img/05/seahorse1.png', 'img/05/seahorse2.png'] },
+                { id: 'frame-seq-crab', frames: ['img/06/crab1.png', 'img/06/crab2.png'] },
+                { id: 'frame-seq-reef', frames: ['img/07/reef1.png', 'img/07/reef2.png'] },
+                { id: 'frame-seq-song', frames: ['img/08/song1.png', 'img/08/song2.png'] }
+            ];
+            configs.forEach(function (config) {
+                const img = document.getElementById(config.id);
+                if (!img) return;
+                config.frames.slice(1).forEach(function (src) {
+                    const preload = new Image();
+                    preload.src = encodeURI(src);
+                });
+                let index = 0;
+                setInterval(function () {
+                    index = (index + 1) % config.frames.length;
+                    img.src = encodeURI(config.frames[index]);
+                }, 550);
+            });
+        })();
     </script>
 </body>
 </html>
