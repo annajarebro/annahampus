@@ -45,23 +45,65 @@
             overflow-wrap: break-word;
         }
 
+        /* Grain overlay – CSS-Tricks grainy gradients method */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url('img/grain.png');
+            background-repeat: repeat;
+            background-size: 200px 200px;
+            opacity: 0.4;
+            pointer-events: none;
+            z-index: 9999;
+            mix-blend-mode: overlay;
+        }
+
         h1, h2, h3, h4, h5, h6 {
-            text-transform: uppercase;
             font-weight: 400;
         }
 
         p {
-            color: #E5EAF2;
+            color: #A1ACBD;
+        }
+
+        .hero-btn {
+            background-color: rgba(137, 160, 195, 0.1);
+            background-image: none;
+            color: white;
+            border: 1px solid #CDD1D7;
+            border-radius: 6px;
+            padding: 0.75rem 2rem;
+            font-size: 1rem;
+            text-transform: uppercase;
+            transition: opacity 0.2s;
+        }
+        .hero-btn:hover {
+            opacity: 0.9;
         }
     </style>
 </head>
 <body>
+    <!-- Hero section -->
+    <section class="min-h-screen flex flex-col bg-[#162946] relative overflow-hidden">
+        <div class="flex-1 flex flex-col items-center justify-center gap-12 px-6 pt-12 md:pt-16 pb-8">
+            <img src="img/annahampus.png" alt="Anna och Hampus" class="w-full max-w-[184px] md:max-w-[320px] h-auto mb-10 md:mb-14" />
+            <div class="flex flex-col gap-4 w-full md:max-w-[240px]">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfoe83QXeijhm0I_hG_o_cWatCbcrCVSlWucqS5xpCPLTPPrg/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="hero-btn text-center block w-full">OSA</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfqvkYhSVl7FZ7T3evQly2oMYkr3u20EoZfXkUrkD4AQoA09g/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="hero-btn text-center block w-full">Anmäl tal/spex</a>
+            </div>
+        </div>
+        <div class="hero-waves relative w-full mt-auto flex-shrink-0" aria-hidden="true">
+            <img id="frame-seq-wave" src="img/hero/wave1.png" alt="" class="w-full h-auto block object-cover object-bottom" />
+        </div>
+    </section>
+
     <!-- Section 1: Vigsel -->
-    <section class="min-h-screen flex items-center justify-center px-4 md:px-8">
+    <section id="osa" class="min-h-screen flex items-center justify-center px-4 md:px-8">
         <div class="w-full max-w-7xl min-w-0 min-h-screen md:min-h-0 flex flex-col md:flex-row items-center justify-between md:justify-center gap-0 md:gap-20 relative z-10 pt-14 pb-16 md:pt-0 md:pb-0">
             <div class="text-white text-left w-full min-w-0 md:max-w-[500px] p-6 md:p-0 md:order-2">
-                <h2 class="text-[20px] mb-4">17.00 Vigsel St. Birgittas kapell</h2>
-                <p class="text-[16px] font-normal mb-2">Klippan 2, 414 51 Göteborg</p>
+                <h2 class="text-[20px] mb-4">17.00 Vigsel S:ta Birgittas kapell</h2>
+                <p class="text-[16px] font-normal mb-4">Klippan 2, 414 51 Göteborg</p>
                 <p class="text-[16px] font-normal">Närmsta hållplats: Vagnhallen Majorna (spårvagn), Klippan (buss)</p>
             </div>
             <div class="parallax-shape -mx-4 w-[calc(100%+2rem)] md:mx-0 md:w-80 h-auto flex-1 min-h-0 md:flex-initial flex items-center justify-center mt-0 relative z-10 md:order-1 overflow-hidden">
@@ -76,7 +118,7 @@
             <div class="text-white text-left w-full min-w-0 md:max-w-[500px] p-6 md:p-0 md:order-2">
                 <h2 class="text-[20px] mb-4">18.00 Brudskål & Båttransport</h2>
                 <p class="text-[16px] font-normal leading-relaxed">
-                    En transportbåt tar oss från vigseln till festlokalen. Under färden sker brudskål och mingel. Båtturen tar ca 1.5h. Det finns begränsat med sittplatser, men gott om förfriskningsmöjligheter.
+                   Efter vigseln tar vi oss med båt till festlokalen. Under färden sker brudskål och mingel.  <br> <br> Det finns begränsat med sittplatser, men gott om förfriskningsmöjligheter.
                 </p>
             </div>
             <div class="parallax-shape -mx-4 w-[calc(100%+2rem)] md:mx-0 md:w-96 h-auto flex-1 min-h-0 md:flex-initial flex items-center justify-center mt-0 relative z-10 md:order-1 overflow-hidden">
@@ -92,7 +134,7 @@
                 <h2 class="text-[20px] mb-4">19.30 Middag & fest på Rotundan, Björkö</h2>
                 <p class="text-[16px] font-normal mb-2">Framnäs 1, 475 37 Bohus-björkö</p>
                 <p class="text-[16px] font-normal leading-relaxed">
-                    Tar man sig hit på egen hand så går det regelbundna färjor från Lilla Varholmens färjeterminal, Torslanda.
+                    Båten anländer i anslutning till festlokalen, där vi njuter av middag, tal och fest.
                 </p>
             </div>
             <div class="parallax-shape -mx-4 w-[calc(100%+2rem)] md:mx-0 md:w-64 h-auto flex-1 min-h-0 md:flex-initial flex items-center justify-center mt-0 relative z-10 md:order-1 overflow-hidden">
@@ -107,7 +149,7 @@
             <div class="text-white text-left w-full min-w-0 md:max-w-[500px] p-6 md:p-0 md:order-2">
                 <h2 class="text-[20px] mb-4">02.30 Vickning & hemfärd</h2>
                 <p class="text-[16px] font-normal leading-relaxed mb-4">
-                    Färja avgår kl 03.00 från Björkö och en abonnerad buss tar oss sedan från färjeläget i Lilla Varholmen till Hotell Draken (Järntorget).
+                    En kort 5min färja avgår kl 03.00 från Björkö och en abonnerad buss tar oss sedan från färjeläget i Lilla Varholmen till Hotell Draken (Järntorget).
                 </p>
                 <p class="text-[16px] font-normal leading-relaxed">
                     Vill man åka hem vid en annan tid går färjan ca en gång i timmen och det finns även anslutande kollektivtrafik vid färjelägret.
@@ -124,7 +166,7 @@
         <div class="w-full max-w-7xl min-w-0 min-h-screen md:min-h-0 flex flex-col md:flex-row items-center justify-between md:justify-center gap-0 md:gap-20 relative z-10 pt-14 pb-16 md:pt-0 md:pb-0">
             <div class="text-white text-left w-full min-w-0 md:max-w-[500px] p-6 md:p-0 md:order-1">
                 <h2 class="text-[20px] mb-4">Klädkod</h2>
-                <p class="text-[16px] font-normal">Kavaj</p>
+                <p class="text-[16px] font-normal">Kavaj.</p>
             </div>
             <div class="parallax-shape -mx-4 w-[calc(100%+2rem)] md:mx-0 md:w-64 h-auto flex-1 min-h-0 md:flex-initial flex items-center justify-center mt-0 relative z-10 md:order-2 overflow-hidden">
                 <img id="frame-seq-seahorse" src="img/05/seahorse1.png" alt="Illustration klädkod" class="w-full h-auto block object-contain object-center">
@@ -163,18 +205,17 @@
     </section>
 
     <!-- Section 8: Tal & Spex -->
-    <section class="min-h-screen flex items-center justify-center px-4 md:px-8">
+    <section id="tal-spex" class="min-h-screen flex items-center justify-center px-4 md:px-8">
         <div class="w-full max-w-7xl min-w-0 min-h-screen md:min-h-0 flex flex-col md:flex-row items-center justify-between md:justify-center gap-0 md:gap-20 relative z-10 pt-14 pb-16 md:pt-0 md:pb-0">
             <div class="text-white text-left w-full min-w-0 md:max-w-[500px] p-6 md:p-0 md:order-1">
                 <h2 class="text-[20px] mb-4">Tal & Spex</h2>
                 <p class="text-[16px] font-normal leading-relaxed mb-4">
-                    Vill du hålla ett tal eller spex kontakta våra toastmasters
+                    Vill du hålla ett tal eller spex kan du anmäla dig i formuläret nedan eller kontakta våra toastmasters
                 </p>
                 <p class="text-[16px] font-normal mb-1">Sanna Nalin 07X-XXX-XX-XX</p>
-                <p class="text-[16px] font-normal mb-1"><a href="mailto:annahampus2026@gmail.com" class="underline hover:opacity-80">annahampus2026@gmail.com</a></p>
                 <p class="text-[16px] font-normal mb-1">Person nr 2 07X-XXX-XX-XX</p>
-                <p class="text-[16px] font-normal mb-6"><a href="mailto:annahampus2026@gmail.com" class="underline hover:opacity-80">annahampus2026@gmail.com</a></p>
-                <p class="text-[16px] font-normal leading-relaxed">
+              
+                <p class="mt-4 text-[16px] font-normal leading-relaxed">
                     Har ni övriga frågor är ni varmt välkomna att kontakta brudparet:
                 </p>
                 <p class="text-[16px] font-normal mt-2">Anna: 070-286 63 33</p>
@@ -183,6 +224,14 @@
             <div class="parallax-shape -mx-4 w-[calc(100%+2rem)] md:mx-0 md:w-80 h-auto flex-1 min-h-0 md:flex-initial flex items-center justify-center mt-0 relative z-10 md:order-2 overflow-hidden">
                 <img id="frame-seq-song" src="img/08/song1.png" alt="Illustration tal och spex" class="w-full h-auto block object-contain object-center">
             </div>
+        </div>
+    </section>
+
+    <!-- Section 9: Länkar (OSA & Anmäl tal/spex) -->
+    <section class="min-h-screen flex items-center justify-center px-4 md:px-8 py-16">
+        <div class="flex flex-col gap-4 w-full md:max-w-[240px]">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfoe83QXeijhm0I_hG_o_cWatCbcrCVSlWucqS5xpCPLTPPrg/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="hero-btn text-center block w-full">OSA</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfqvkYhSVl7FZ7T3evQly2oMYkr3u20EoZfXkUrkD4AQoA09g/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="hero-btn text-center block w-full">Anmäl tal/spex</a>
         </div>
     </section>
 
@@ -231,6 +280,7 @@
         // Frame sequences for sections 1–8
         (function initFrameSequences() {
             const configs = [
+                { id: 'frame-seq-wave', frames: ['img/hero/wave1.png', 'img/hero/wave2.png', 'img/hero/wave3.png'] },
                 { id: 'frame-seq-vigsel', frames: ['img/01/shell1.png', 'img/01/shell2.png', 'img/01/shell3.png'] },
                 { id: 'frame-seq-toast', frames: ['img/02/toast1.png', 'img/02/toast2.png'] },
                 { id: 'frame-seq-disco', frames: ['img/03/disco2.png', 'img/03/Untitled_Artwork 30.png'] },
