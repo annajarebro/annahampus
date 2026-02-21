@@ -83,7 +83,7 @@
         }
     </style>
 </head>
-<body class="snap-y snap-proximity">
+<body class="snap-y snap-mandatory">
     <!-- Hero section -->
     <section class="min-h-screen flex flex-col bg-[#162946] relative overflow-hidden">
         <div class="flex-1 flex flex-col items-center justify-center gap-12 px-6 pt-12 md:pt-16 pb-8">
@@ -228,7 +228,28 @@
         </div>
     </section>
 
-    <!-- Section 9: Länkar (OSA & Anmäl tal/spex) -->
+    <!-- Section 9: Barn -->
+    <section class="min-h-screen flex items-center justify-center px-4 md:px-8 snap-start">
+        <div class="w-full max-w-7xl min-w-0 min-h-screen md:min-h-0 flex flex-col md:flex-row items-center justify-between md:justify-center gap-0 md:gap-20 relative z-10 pt-14 pb-16 md:pt-0 md:pb-0">
+            <div class="text-white text-left w-full min-w-0 md:max-w-[500px] p-6 md:p-0 md:order-2">
+                <h2 class="text-[20px] mb-4">Gäster med barn</h2>
+                <p class="text-[16px] font-normal leading-relaxed mb-4">
+                    Barn är varmt välkomna, men är inte automatiskt medräknade i inbjudan. Ni avgör själva om era barn ska följa med på bröllopet.
+                </p>
+                <p class="text-[16px] font-normal leading-relaxe mb-4">
+                    Vi gör vårt bästa för att skapa plats för alla, men eftersom antalet platser på båten är begränsat kan det innebära att ni som tar med barn behöver ordna egen transport till festlokalen.
+                </p>
+                <p class="text-[16px] font-normal leading-relaxed">
+                    Vänligen ange i er OSA om barn kommer att närvara.
+                </p>
+            </div>
+            <div class="parallax-shape -mx-4 w-[calc(100%+2rem)] md:mx-0 md:w-80 h-auto flex-1 min-h-0 md:flex-initial flex items-center justify-center mt-0 md:-mt-10 relative z-10 md:order-1 overflow-hidden">
+                <img id="frame-seq-starfish" src="img/10/startfish1.png" alt="Illustration barn" class="w-full h-auto block object-contain object-center pl-8 pr-8">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 10: Länkar (OSA & Anmäl tal/spex) -->
     <section class="min-h-screen flex flex-col bg-[#162946] relative overflow-hidden">
         <div class="flex-1 flex flex-col items-center justify-center gap-12 px-6 pt-12 md:pt-16 pb-8">
             <div class="flex flex-col gap-4 w-full md:max-w-[240px]">
@@ -286,7 +307,7 @@
             initParallax();
         }
 
-        // Frame sequences for sections 1–8
+        // Frame sequences for sections 1–9
         (function initFrameSequences() {
             const configs = [
                 { id: 'frame-seq-wave', frames: ['img/hero/wave1.png', 'img/hero/wave2.png', 'img/hero/wave3.png'] },
@@ -297,7 +318,8 @@
                 { id: 'frame-seq-seahorse', frames: ['img/05/seahorse1.png', 'img/05/seahorse2.png'] },
                 { id: 'frame-seq-crab', frames: ['img/06/crab1.png', 'img/06/crab2.png'] },
                 { id: 'frame-seq-reef', frames: ['img/07/reef1.png', 'img/07/reef2.png'] },
-                { id: 'frame-seq-song', frames: ['img/08/song1.png', 'img/08/song2.png'] }
+                { id: 'frame-seq-song', frames: ['img/08/song1.png', 'img/08/song2.png'] },
+                { id: 'frame-seq-starfish', frames: ['img/10/startfish1.png', 'img/10/startfish2.png'] }
             ];
             configs.forEach(function (config) {
                 const img = document.getElementById(config.id);
