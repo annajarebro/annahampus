@@ -83,7 +83,7 @@
         }
     </style>
 </head>
-<body>
+<body class="snap-y snap-proximity">
     <!-- Hero section -->
     <section class="min-h-screen flex flex-col bg-[#162946] relative overflow-hidden">
         <div class="flex-1 flex flex-col items-center justify-center gap-12 px-6 pt-12 md:pt-16 pb-8">
@@ -91,6 +91,7 @@
             <div class="flex flex-col gap-4 w-full md:max-w-[240px]">
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfoe83QXeijhm0I_hG_o_cWatCbcrCVSlWucqS5xpCPLTPPrg/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="hero-btn text-center block w-full">OSA</a>
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfqvkYhSVl7FZ7T3evQly2oMYkr3u20EoZfXkUrkD4AQoA09g/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="hero-btn text-center block w-full">Anmäl tal/spex</a>
+                <p class="text-[16px] font-normal text-center m-4"> OSA senast 1 Maj, </br>scrolla för mer information om dagen.</p>
             </div>
         </div>
         <div class="hero-waves relative w-full mt-auto flex-shrink-0" aria-hidden="true">
@@ -99,12 +100,12 @@
     </section>
 
     <!-- Section 1: Vigsel -->
-    <section id="osa" class="min-h-screen flex items-center justify-center px-4 md:px-8">
-        <div class="w-full max-w-7xl min-w-0 min-h-screen md:min-h-0 flex flex-col md:flex-row items-center justify-between md:justify-center gap-0 md:gap-20 relative z-10 pt-14 pb-16 md:pt-0 md:pb-0">
+    <section id="osa" class="min-h-screen flex items-center justify-center px-4 md:px-8 snap-start">
+        <div class="w-full max-w-7xl min-w-0 min-h-screen md:min-h-0 flex flex-col md:flex-row items-center justify-end md:justify-center gap-0 md:gap-20 relative z-10 pt-[72px] pb-16 md:pt-0 md:pb-0">
             <div class="text-white text-left w-full min-w-0 md:max-w-[500px] p-6 md:p-0 md:order-2">
                 <h2 class="text-[20px] mb-4">17.00 Vigsel S:ta Birgittas kapell</h2>
                 <p class="text-[16px] font-normal mb-4">Klippan 2, 414 51 Göteborg</p>
-                <p class="text-[16px] font-normal">Närmsta hållplats: Vagnhallen Majorna (spårvagn), Klippan (buss)</p>
+                <p class="text-[16px] font-normal">Närmsta hållplats: Vagnhallen Majorna (spårvagn) eller Klippan (buss)</p>
             </div>
             <div class="parallax-shape -mx-4 w-[calc(100%+2rem)] md:mx-0 md:w-80 h-auto flex-1 min-h-0 md:flex-initial flex items-center justify-center mt-0 md:-mt-10 relative z-10 md:order-1 overflow-hidden">
                 <img id="frame-seq-vigsel" src="img/01/shell1.png" alt="Illustration vigsel" class="w-full h-auto block object-contain object-center pl-9 pr-9">
@@ -113,12 +114,12 @@
     </section>
 
     <!-- Section 2: Brudskål & Båttransport -->
-    <section class="min-h-screen flex items-center justify-center px-4 md:px-8">
+    <section class="min-h-screen flex items-center justify-center px-4 md:px-8 snap-start">
         <div class="w-full max-w-7xl min-w-0 min-h-screen md:min-h-0 flex flex-col md:flex-row items-center justify-between md:justify-center gap-0 md:gap-20 relative z-10 pt-14 pb-16 md:pt-0 md:pb-0">
             <div class="text-white text-left w-full min-w-0 md:max-w-[500px] p-6 md:p-0 md:order-2">
                 <h2 class="text-[20px] mb-4">18.00 Brudskål & Båttransport</h2>
                 <p class="text-[16px] font-normal leading-relaxed">
-                   Efter vigseln tar vi oss med båt till festlokalen. Under färden sker brudskål och mingel.  <br> <br> Det finns begränsat med sittplatser, men gott om förfriskningsmöjligheter.
+                   Efter vigseln tar vi oss med båt till festlokalen. Färden är ca 1,5h. Under färden sker brudskål och mingel.  <br> <br> Det finns begränsat med sittplatser, men gott om förfriskningsmöjligheter.
                 </p>
             </div>
             <div class="parallax-shape -mx-4 w-[calc(100%+2rem)] md:mx-0 md:w-96 h-auto flex-1 min-h-0 md:flex-initial flex items-center justify-center mt-0 md:-mt-10 relative z-10 md:order-1 overflow-hidden">
@@ -128,7 +129,7 @@
     </section>
 
     <!-- Section 3: Middag & fest -->
-    <section class="min-h-screen flex items-center justify-center px-4 md:px-8">
+    <section class="min-h-screen flex items-center justify-center px-4 md:px-8 snap-start">
         <div class="w-full max-w-7xl min-w-0 min-h-screen md:min-h-0 flex flex-col md:flex-row items-center justify-between md:justify-center gap-0 md:gap-20 relative z-10 pt-14 pb-16 md:pt-0 md:pb-0">
             <div class="text-white text-left w-full min-w-0 md:max-w-[500px] p-6 md:p-0 md:order-2">
                 <h2 class="text-[20px] mb-4">19.30 Middag & fest på Rotundan, Björkö</h2>
@@ -144,7 +145,7 @@
     </section>
 
     <!-- Section 4: Vickning & hemfärd -->
-    <section class="min-h-screen flex items-center justify-center px-4 md:px-8">
+    <section class="min-h-screen flex items-center justify-center px-4 md:px-8 snap-start">
         <div class="w-full max-w-7xl min-w-0 min-h-screen md:min-h-0 flex flex-col md:flex-row items-center justify-between md:justify-center gap-0 md:gap-20 relative z-10 pt-14 pb-16 md:pt-0 md:pb-0">
             <div class="text-white text-left w-full min-w-0 md:max-w-[500px] p-6 md:p-0 md:order-2">
                 <h2 class="text-[20px] mb-4">02.30 Vickning & hemfärd</h2>
@@ -162,7 +163,7 @@
     </section>
 
     <!-- Section 5: Klädkod -->
-    <section class="min-h-screen flex items-center justify-center px-4 md:px-8">
+    <section class="min-h-screen flex items-center justify-center px-4 md:px-8 snap-start">
         <div class="w-full max-w-7xl min-w-0 min-h-screen md:min-h-0 flex flex-col md:flex-row items-center justify-between md:justify-center gap-0 md:gap-20 relative z-10 pt-14 pb-16 md:pt-0 md:pb-0">
             <div class="text-white text-left w-full min-w-0 md:max-w-[500px] p-6 md:p-0 md:order-2">
                 <h2 class="text-[20px] mb-4">Klädkod</h2>
@@ -175,7 +176,7 @@
     </section>
 
     <!-- Section 6: Gåvor -->
-    <section class="min-h-screen flex items-center justify-center px-4 md:px-8">
+    <section class="min-h-screen flex items-center justify-center px-4 md:px-8 snap-start">
         <div class="w-full max-w-7xl min-w-0 min-h-screen md:min-h-0 flex flex-col md:flex-row items-center justify-between md:justify-center gap-0 md:gap-20 relative z-10 pt-14 pb-16 md:pt-0 md:pb-0">
             <div class="text-white text-left w-full min-w-0 md:max-w-[500px] p-6 md:p-0 md:order-2">
                 <h2 class="text-[20px] mb-4">Gåvor</h2>
@@ -190,7 +191,7 @@
     </section>
 
     <!-- Section 7: Boende -->
-    <section class="min-h-screen flex items-center justify-center px-4 md:px-8">
+    <section class="min-h-screen flex items-center justify-center px-4 md:px-8 snap-start">
         <div class="w-full max-w-7xl min-w-0 min-h-screen md:min-h-0 flex flex-col md:flex-row items-center justify-between md:justify-center gap-0 md:gap-20 relative z-10 pt-14 pb-16 md:pt-0 md:pb-0">
             <div class="text-white text-left w-full min-w-0 md:max-w-[500px] p-6 md:p-0 md:order-2">
                 <h2 class="text-[20px] mb-4">Boende</h2>
@@ -205,15 +206,15 @@
     </section>
 
     <!-- Section 8: Tal & Spex -->
-    <section id="tal-spex" class="min-h-screen flex items-center justify-center px-4 md:px-8">
+    <section id="tal-spex" class="min-h-screen flex items-center justify-center px-4 md:px-8 snap-start">
         <div class="w-full max-w-7xl min-w-0 min-h-screen md:min-h-0 flex flex-col md:flex-row items-center justify-between md:justify-center gap-0 md:gap-20 relative z-10 pt-14 pb-16 md:pt-0 md:pb-0">
             <div class="text-white text-left w-full min-w-0 md:max-w-[500px] p-6 md:p-0 md:order-2">
                 <h2 class="text-[20px] mb-4">Tal & Spex</h2>
                 <p class="text-[16px] font-normal leading-relaxed mb-4">
                     Vill du hålla ett tal eller spex kan du anmäla dig i formuläret nedan eller kontakta våra toastmasters
                 </p>
-                <p class="text-[16px] font-normal mb-1">Sanna Nalin 07X-XXX-XX-XX</p>
-                <p class="text-[16px] font-normal mb-1">Person nr 2 07X-XXX-XX-XX</p>
+                <p class="text-[16px] font-normal mb-1">Sanna Nalin 073-629 49 21</p>
+                <p class="text-[16px] font-normal mb-1">Daniel Lexén 073-044 94 60</p>
               
                 <p class="mt-4 text-[16px] font-normal leading-relaxed">
                     Har ni övriga frågor är ni varmt välkomna att kontakta brudparet:
